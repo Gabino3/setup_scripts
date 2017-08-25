@@ -1,0 +1,14 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "python.linting.enabledWithoutWorkspace": false,
+
+    "go.testTimeout": "1800s",
+
+    "python.linting.pylintArgs":[
+        "--rcfile=C:\\Code\\ezoicgit\\corp\\admin\\lib\\crons\\chrome\\py_scripts\\pylintrc"
+    ],
+
+    "python.pythonPath": "C:/Python34/python.exe",
+
+    "editor.insertSpaces": false
+}
