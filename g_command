@@ -1,0 +1,18 @@
+#In a bash startup file 
+g() {
+ if [[ -d "/path/to/$@" ]]; then
+        command cd "/path/to/$@"
+ else
+        echo "no such dir"
+ fi
+}
+
+#In /etc/bash_completion.d/g
+_g()
+{
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    IFS=$'\n' tmp=( $(compgen -W "$(ls /media/sf_go/src/github.com/ezoic/ )" -- $cur))
+    COMPREPLY=( "${tmp[@]// /\ }" )
+}
+
+complete -F _g g
